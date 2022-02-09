@@ -1,0 +1,12 @@
+*{
+    padding: 0px; /* Conviene especificar estas propiedades siempre */
+    margin: 0px; /* Los navegadores suelen aplicar algo de padding y margin en default */
+}
+
+body{
+    background: rgb(43, 0, 83);
+}
+
+.mainhead{
+    display: grid;
+}
