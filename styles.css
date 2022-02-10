@@ -5,8 +5,63 @@
 
 body{
     background: rgb(43, 0, 83);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .mainhead{
-    display: grid;
+    display: grid; /* Con esto especificamos que vamos a usar grid-layout para diseñar */
+    grid-template-columns: auto auto; /* Permite determinar el tamaño de las columnas, y
+    la cantidad de acuerdo a la cantidad de parámetros */
+    grid-template-rows: 40% auto auto 20%; /* Lo mismo que lo anterior, pero aplicado a las filas */
+    grid-template-areas: "header header" 
+                         "navmenu navmenu"
+                         "container1 sidemenu"
+                         "footp footp";
+                         /* Esto permite ubicar los elementos de acuerdo a un nombre.
+                            La cantidad de espacios debe ser igual en todas las líneas.
+                            Se respetará un orden descendente.
+                            Tras esto, se debe aplicar grid-area a los elementos con su correspondiente
+                            nombre. */
+}
+
+.header{
+    grid-area: header;
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.navmenu{
+    grid-area: navmenu;
+    background: black;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    padding-bottom: 10px;
+}
+
+.sidemenu{
+    grid-area: sidemenu;
+    background: rgb(99, 0, 0);
+    padding-left: 10px;
+    padding-top: 10px;
+    color: white;
+}
+
+.container1{
+    grid-area: container1;
+    background: black;
+    color: white;
+    min-height: 300px;
+}
+
+.footp{
+    grid-area: footp;
+    padding: 20px;
+    color: white;
+    font-size: 100%;
+    text-align: center;
 }
