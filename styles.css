@@ -12,7 +12,7 @@ body{
     display: grid; /* Con esto especificamos que vamos a usar grid-layout para diseñar */
     grid-template-columns: auto; /* Permite determinar el tamaño de las columnas, y
     la cantidad de acuerdo a la cantidad de parámetros */
-    grid-template-rows: auto auto auto auto; /* Lo mismo que lo anterior, pero aplicado a las filas */
+    grid-template-rows: auto 10% auto auto; /* Lo mismo que lo anterior, pero aplicado a las filas */
     grid-template-areas: "header" 
                          "navmenu"
                          "midpage"
@@ -24,9 +24,16 @@ body{
                             nombre. */
 }
 
-.header{
+header{
     grid-area: header;
     color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.head{
+    background: black;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -34,23 +41,38 @@ body{
     padding-bottom: 10px;
 }
 
+.imgicon{
+    content:url(skyrim/helmeticon.png);
+    max-width: 5%;
+    height: auto;
+}
+
+.head h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    padding-left: 5px;
+    font-size: calc(0.75em + 2vmin);
+}
+
 .navmenu{
-    border: 5px solid pink;
     grid-area: navmenu;
-    background: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
 .navmenu ul{
-    border: 5px solid lightblue;
+    background: black;
     list-style: none;
+    height: 80%;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-template-rows: auto;
     justify-content: space-around;
+    align-items: center;
 }
 
-.navmenu li a{
-    border: 5px solid red;
+.navmenu ul li a{
     color: white;
     text-decoration: none;
 }
@@ -75,23 +97,208 @@ body{
     order: 2;
 }
 
+.sidemenu h2{
+    font-size: calc(0.75em + 1vmin);
+    padding-bottom: 5px;
+}
+
+.inputbar{
+    width: 50%;
+}
+
 .container1{
     grid-area: container1;
     background: black;
     color: white;
     width: 80%;
-    min-height: 300px;
+    min-height: 600px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    align-content: flex-start;
+    align-content: space-around;
     order: 1;
 }
 
-.footp{
+.box1{
+    background: lightblue;
+    width: 225px;    
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    order: 1;
+}
+
+.img1{
+    content:url(skyrim/laberynthia.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box2{
+    background: lightblue;
+    width: 225px;    
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    order: 2; /* Especifica el orden en que aparecerá el elemento */
+} 
+
+.img2{
+    content:url(skyrim/valthume.png);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box3{
+    background: lightblue;
+    width: 225px;    
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    order: 3;
+}
+
+.img3{
+    content:url(skyrim/ysgramortumb.png);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box4{
+    background: lightblue;
+    width: 225px;    
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    order: 4;
+}
+
+.img4{
+    content:url(skyrim/ustengrav.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box5{
+    background: lightblue;
+    width: 225px;    
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    order: 5;
+}
+
+.img5{
+    content:url(skyrim/volskygge.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box6{
+    background: lightblue;
+    width: 225px;    
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    order: 6;
+}
+
+.img6{
+    content:url(skyrim/ragnvald.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box7{
+    background: lightblue;
+    width: 225px;    
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    order: 7;
+}
+
+.img7{
+    content:url(skyrim/saarthal.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box8{
+    background: lightblue;
+    width: 225px;    
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    order: 8;
+}
+
+.img8{
+    content:url(skyrim/folgunthur.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+footer{
+    border: 5px solid green;
     grid-area: footp;
     padding: 20px;
     color: white;
     font-size: 100%;
     text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.footp{
+    
 }
