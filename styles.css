@@ -10,13 +10,13 @@ body{
 
 .mainhead{
     display: grid; /* Con esto especificamos que vamos a usar grid-layout para diseñar */
-    grid-template-columns: auto auto; /* Permite determinar el tamaño de las columnas, y
+    grid-template-columns: auto; /* Permite determinar el tamaño de las columnas, y
     la cantidad de acuerdo a la cantidad de parámetros */
-    grid-template-rows: 40% auto auto 20%; /* Lo mismo que lo anterior, pero aplicado a las filas */
-    grid-template-areas: "header header" 
-                         "navmenu navmenu"
-                         "container1 sidemenu"
-                         "footp footp";
+    grid-template-rows: auto auto auto auto; /* Lo mismo que lo anterior, pero aplicado a las filas */
+    grid-template-areas: "header" 
+                         "navmenu"
+                         "midpage"
+                         "footp";
                          /* Esto permite ubicar los elementos de acuerdo a un nombre.
                             La cantidad de espacios debe ser igual en todas las líneas.
                             Se respetará un orden descendente.
@@ -35,12 +35,31 @@ body{
 }
 
 .navmenu{
+    border: 5px solid pink;
     grid-area: navmenu;
     background: black;
+}
+
+.navmenu ul{
+    border: 5px solid lightblue;
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto;
+    justify-content: space-around;
+}
+
+.navmenu li a{
+    border: 5px solid red;
+    color: white;
+    text-decoration: none;
+}
+
+.midpage{
+    grid-area: midpage;
+    background: black;
     display: flex;
-    flex-flow: column nowrap;
-    align-content: center;
-    padding-bottom: 10px;
+    flex-flow: row nowrap;
 }
 
 .sidemenu{
@@ -49,13 +68,24 @@ body{
     padding-left: 10px;
     padding-top: 10px;
     color: white;
+    width: 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    order: 2;
 }
 
 .container1{
     grid-area: container1;
     background: black;
     color: white;
+    width: 80%;
     min-height: 300px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    order: 1;
 }
 
 .footp{
