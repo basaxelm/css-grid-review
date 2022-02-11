@@ -12,7 +12,7 @@ body{
     display: grid; /* Con esto especificamos que vamos a usar grid-layout para diseñar */
     grid-template-columns: auto; /* Permite determinar el tamaño de las columnas, y
     la cantidad de acuerdo a la cantidad de parámetros */
-    grid-template-rows: auto 10% auto auto; /* Lo mismo que lo anterior, pero aplicado a las filas */
+    grid-template-rows: auto 10% auto 10%; /* Lo mismo que lo anterior, pero aplicado a las filas */
     grid-template-areas: "header" 
                          "navmenu"
                          "midpage"
@@ -288,17 +288,17 @@ header{
 }
 
 footer{
-    border: 5px solid green;
     grid-area: footp;
-    padding: 20px;
-    color: white;
-    font-size: 100%;
-    text-align: center;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
 }
 
 .footp{
-    
+    background: black;
+    color: white;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
