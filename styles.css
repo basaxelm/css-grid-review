@@ -95,10 +95,9 @@ header{
     grid-area: sidemenu;
     background: rgb(99, 0, 0);
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 20px;
     color: white;
     width: 20%;
-    order: 2;
     display: grid;
     grid-template-columns: 90%  ;
     grid-template-rows: 10% 5% 5% auto ;
@@ -107,6 +106,7 @@ header{
                          "button1"
                          "sidemenulinks";
     row-gap: 10px;
+    order: 2;
 }
 @media (max-device-width: 1140px) { /*max-device-width para responsive mobile device*/
     .midpage{
@@ -154,7 +154,6 @@ header{
     border-radius: 5px;
     grid-area: title;
     font-size: calc(0.75em + 1vmin);
-
 }
 
 .inputbar{
@@ -170,6 +169,13 @@ header{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
+}
+
+.sidemenulinks a{
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: calc(0.65em + 1vmin);
 }
 
 .container1{
@@ -380,6 +386,7 @@ header{
 
 footer{
     grid-area: footp;
+    font-size: calc(0.45em + 1vmin);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
